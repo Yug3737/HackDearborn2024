@@ -22,7 +22,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText>The app that allows <ThemedText type="defaultSemiBold">you</ThemedText> to get insights on food you buy.</ThemedText>
         <ThemedText>
-          <ThemedText type="defaultSemiBold">Step 1:</ThemedText> Take a picture of the food label.{"\n"}
+          <ThemedText type="defaultSemiBold">Step 1:</ThemedText> Take a picture of the food Barcode or QR Code.{"\n"}
           <ThemedText type="defaultSemiBold">Step 2:</ThemedText> Get insights on the food.{"\n"}
           It's that simple!{"\n"}
           {"\n"}
@@ -34,6 +34,13 @@ export default function HomeScreen() {
           - Fiber{"\n"}
           - Sugar{"\n"}
           - Sodium{"\n"}
+          {"\n"}
+        </ThemedText>
+        <ThemedText>
+          <ThemedText type="defaultSemiBold">Color Breakdown:</ThemedText>{"\n"}
+          - Light Green: Good {"\n"}
+          - Yellow: Fair {"\n"}
+          - Red: Bad {"\n"}
           {"\n"}
         </ThemedText>
       </ThemedView>
