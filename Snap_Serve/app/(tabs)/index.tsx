@@ -22,12 +22,19 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText>The app that allows <ThemedText type="defaultSemiBold">you</ThemedText> to get insights on food you buy.</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
+          <ThemedText type="defaultSemiBold">Step 1:</ThemedText> Take a picture of the food label.{"\n"}
+          <ThemedText type="defaultSemiBold">Step 2:</ThemedText> Get insights on the food.{"\n"}
+          It's that simple!{"\n"}
+          {"\n"}
+          <ThemedText type="defaultSemiBold">Nutrition Breakdown:</ThemedText>{"\n"}
+          - Calories{"\n"}
+          - Fat{"\n"}
+          - Carbs{"\n"}
+          - Protein{"\n"}
+          - Fiber{"\n"}
+          - Sugar{"\n"}
+          - Sodium{"\n"}
+          {"\n"}
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -38,15 +45,15 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 4,
   },
   stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+    gap: 4,
+    marginBottom: 4,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 250,
+    width: 425,
     bottom: 0,
     left: 0,
     position: 'absolute',
