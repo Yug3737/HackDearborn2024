@@ -90,15 +90,15 @@ export default function App() {
                             <h1>🧋Snap & Serve🧋</h1>
                         </div>
                         <div className="stepContainer">
-                            <p>
+                            <p style={{ fontSize: '25px' }}>
                                 The app that allows <strong>you</strong> to get insights on drinks you buy.
                             </p>
-                            <p>
+                            <p style={{ fontSize: '25px' }}>
                                 <strong>Step 1:</strong> Take a picture of the drinks Barcode.<br />
                                 <strong>Step 2:</strong> Get insights on its sugar levels.<br />
                                 It's that simple!<br /><br />
                             </p>
-                            <p>
+                            <p style={{ fontSize: '25px' }}>
                                 <strong>Color Breakdown:</strong><br />
                                 - Dark Green: Excellent<br />
                                 - Light Green: Good<br />
@@ -106,8 +106,6 @@ export default function App() {
                                 - Red: Bad<br /><br />
                             </p>
                         </div>
-                    </div>
-                    <div className="centerContainer">
                         <button onClick={handleShowResults} className="navigateButton">
                             Go to Camera Page
                         </button>
@@ -149,7 +147,7 @@ export default function App() {
                     <div className="textContainer">
                         <div className="stepContainer">
                             <p><strong>Item Information:</strong></p>
-                            <p style={{ color: classificationColor }}>*Classification: {classification}</p>
+                            <p style={{ color: classificationColor, fontSize: '30px' }}>*Classification: {classification}</p>
                         </div>
 
                         <div className="centerContainer">

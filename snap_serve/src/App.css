@@ -5,7 +5,9 @@ html, body {
   height: 100%;
   font-family: Arial, sans-serif;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 25px;
 }
+
 
 /* Main container takes full viewport height */
 .container {
@@ -17,6 +19,7 @@ html, body {
   background-color: #526397; /* Background color from your color scheme */
   padding: 20px;
   box-sizing: border-box;
+
 }
 
 /* For images/webcam that need to fit nicely */
@@ -42,6 +45,7 @@ html, body {
   justify-content: center;
   align-items: flex-start; /* Align text/buttons to the left */
   padding: 20px; /* Add padding for text */
+  font-size: 35px;
 }
 
 /* Buttons styling */
