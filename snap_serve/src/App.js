@@ -69,7 +69,7 @@ export default function App() {
               The app that allows <strong>you</strong> to get insights on food you buy.
             </p>
             <p>
-              <strong>Step 1:</strong> Take a picture of the drink Barcode.<br />
+              <strong>Step 1:</strong> Take a picture of the drink's Barcode.<br />
               <strong>Step 2:</strong> Get insights on its sugar levels.<br />
               It's that simple!<br /><br />
             </p>
