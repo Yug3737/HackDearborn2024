@@ -29,6 +29,16 @@ export default function TabTwoScreen() {
         source={require('@/assets/images/placeholder.jpg')}
         style={{ width: 375, height: 450, alignSelf: 'center' }}
       />
+    <ThemedView style={styles.stepContainer}>
+        <ThemedText type="defaultSemiBold">Item Information:{"\n"}</ThemedText>
+        <ThemedText>*Calories: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Fat: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Carbs: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Protein: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Fiber: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Sugar: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+        <ThemedText>*Sodium: Insert DATABASE Call + Color*{"\n"}</ThemedText>
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
