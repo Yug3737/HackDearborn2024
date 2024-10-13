@@ -1,7 +1,7 @@
 import os
 import requests
 from flask import Flask, request, render_template, redirect, url_for
-from flask_cors import cors
+from flask_cors import CORS
 
 app = Flask(__name__)
 
