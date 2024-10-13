@@ -1,61 +1,85 @@
-/* App.css */
-body {
-  background-color: #526397; /* Light background color */
-  color: #11181C; /* Light text color */
+/* Set body and html to take up full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-h1, h3, p {
-  color: #11181C; /* Light text color */
-  text-align: center; /* Center text */
-  font-size-adjust: 14px; /* Adjust font size */
-}
-
-.navigateButton {
-  background-color: #ff9999; /* Light tint color */
-  color: #11181C; /* Light text color */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.navigateButton:hover {
-  background-color: #cc7a7a; /* Slightly darker tint on hover */
-}
-
-.cameraContainer {
-  background-color: #526397; /* Light background color for camera preview */
+/* Main container takes full viewport height */
+.container {
+  display: flex;
+  flex-direction: row; /* Place webcam and text side by side */
+  justify-content: space-between; /* Distribute space between webcam and text */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: #526397; /* Background color from your color scheme */
   padding: 20px;
-  border-radius: 10px;
+  box-sizing: border-box;
 }
 
+/* For images/webcam that need to fit nicely */
 .imageContainer {
+  flex: 1; /* Takes 50% of the width */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
 }
 
-.headerImage {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Captured Image */
-img {
-  max-width: 100%; /* Responsive image */
+.webcamPreview {
+  max-width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 5px;
+}
+
+/* Text and buttons container will be on the right */
+.textContainer {
+  flex: 1; /* Takes the other 50% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text/buttons to the left */
+  padding: 20px; /* Add padding for text */
+}
+
+/* Buttons styling */
+.navigateButton {
+  background-color: #ff9999;
+  color: #11181C;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Add hover effect for buttons */
+.navigateButton:hover {
+  background-color: #ffcccc;
+}
+
+/* Media query for laptop screens */
+@media screen and (min-width: 1200px) {
+  .headerImage {
+    max-width: 40%;
+  }
+
+  .navigateButton {
+    font-size: 1.4em;
+    padding: 20px 40px;
+  }
 }
 
 /* Step Container for Item Information */
 .stepContainer p {
-  font-size: 14px; /* Smaller font for details */
-  line-height: 1.5; /* Improve readability */
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* Centering container for camera preview and buttons */
+/* Centering container for buttons and content */
 .centerContainer {
   display: flex;
   justify-content: center;
@@ -65,26 +89,52 @@ img {
   text-align: center; /* Centers text inside */
 }
 
-/* Style for webcam preview */
-.webcamPreview {
-  max-width: 500px;
-  width: 100%;
-  margin-bottom: 20px; /* Adds space between camera and buttons */
-}
-
-/* Style for buttons */
-.navigateButton {
-  margin: 10px; /* Adds space between buttons */
-  padding: 10px 20px;
-  background-color: #1900ff;
-  color: white;
-  border: none;
+/* Captured Image */
+img {
+  max-width: 100%; /* Responsive image */
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
-.navigateButton:hover {
-  background-color: #ff0000;
+/* Home Container */
+.homeContainer {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between items */
 }
 
+/* Camera Section Layout */
+.cameraSection {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Space between image and text */
+  align-items: flex-start; /* Align items to the top */
+  height: 100%; /* Full height */
+}
+
+/* Preview Container for Webcam and Captured Image */
+.imagePreviewContainer {
+  flex: 1; /* Image preview takes full height of the section */
+  display: flex;
+  justify-content: center; /* Center image preview */
+  align-items: center; /* Center image vertically */
+}
+
+/* Button Container Below Image */
+.buttonContainer {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons */
+  margin-top: 10px; /* Space above buttons */
+}
+
+/* Adjust text container for camera section */
+.textContainer {
+  flex: 1; /* Takes up remaining space */
+  padding: 20px; /* Padding for text */
+}
+
+/* Captured Image Styling */
+.capturedImage {
+  max-width: 100%;
+  height: auto; /* Keep aspect ratio */
+}
