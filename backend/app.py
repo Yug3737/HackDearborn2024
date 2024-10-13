@@ -1,7 +1,7 @@
 import os
 import requests
 from flask import Flask, request, render_template, redirect, url_for
-from flask_cors import cors
+from flask_cors import CORS
 
 app = Flask(__name__)
 
@@ -47,7 +47,7 @@ def upload_image():
     file = request.files['file']
     if file.filename == ' ':
         return 'No selected file', 400
-    file.save(os.path.join('uploads', file.filename))
+    file.save(os.path.join('images', file.filename))
     return 'File uploaded successfully'
 
 @app.route("/submit")
