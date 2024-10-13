@@ -1,4 +1,9 @@
+import os
 import requests
+from flask import Flask, request, render_template, redirect, url_for
+from flask_cors import cors
+
+app = Flask(__name__)
 
 def get_sugar_100g(barcode_id):
     headers = {'user-agent':'snapandserve - Android - Version 1.0 - www.snapandserve.com'}
@@ -35,10 +40,23 @@ def classify_into_sugar_category(sugar_100_value):
     else:
         return "D"
 
+@app.route("/upload", methods=['POST'])
+def upload_image():
+    if 'file' not in request.files:
+        return 'No file part', 400
+    file = request.files['file']
+    if file.filename == ' ':
+        return 'No selected file', 400
+    file.save(os.path.join('uploads', file.filename))
+    return 'File uploaded successfully'
+
+@app.route("/submit")
+def classify_product():
+    data = request.json()
+    pass
+
 if __name__ == "__main__":
     barcode_id = int("611269991000")
-    # Read input image
-    # image = cv2.imread("../sample_barcode.png")
-    # detect_and_decode_barcode(image)
     sugar_100g = get_sugar_100g(barcode_id)
     print(classify_into_sugar_category(sugar_100g))
+    app.run(debug=True, host='0.0.0.0', port=5000)
