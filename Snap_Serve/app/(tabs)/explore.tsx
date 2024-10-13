@@ -1,13 +1,15 @@
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Image, Platform } from 'react-native';
+
+import { StyleSheet, Image, Platform, TouchableOpacity } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useNavigation } from '@react-navigation/native';
 
 export default function TabTwoScreen() {
+  const navigation = useNavigation();
   return (
     <ParallaxScrollView
     headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -23,6 +25,10 @@ export default function TabTwoScreen() {
     <ThemedView style={styles.stepContainer}>
       <ThemedText>Scan a QR code or UPC Barcode</ThemedText>
     </ThemedView>
+      <Image
+        source={require('@/assets/images/placeholder.jpg')}
+        style={{ width: 375, height: 450, alignSelf: 'center' }}
+      />
     </ParallaxScrollView>
   );
 }
