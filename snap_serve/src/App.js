@@ -8,6 +8,7 @@ export default function App() {
   const [showResults, setShowResults] = useState(false);
   const [imageSrc, setImageSrc] = useState(null);
   const [isCameraOn, setIsCameraOn] = useState(true);
+  const [classification, setClassification] = useState(null); // New state variable for classification
   const webcamRef = useRef(null);
 
   const handleShowResults = () => {
@@ -19,6 +20,7 @@ export default function App() {
     setShowResults(false);
     setImageSrc(null);
     setIsCameraOn(true);
+    setClassification(null); // Reset classification on going back
   };
 
   const capture = useCallback(() => {
@@ -40,6 +42,14 @@ export default function App() {
         },
       });
       console.log(response.data);
+
+      // Process the incoming JSON
+      if (response.data.classification) {
+        setClassification(response.data.classification); // Store classification in state
+      } else {
+        console.error('Classification not found in response');
+      }
+
     } catch (error) {
       console.error('Error uploading image:', error);
     }
@@ -62,30 +72,32 @@ export default function App() {
               className="reactLogo"
             />
           </div>
-          <div className="titleContainer">
-            <h1>🧋Snap & Serve🧋</h1>
-          </div>
-          <div className="stepContainer">
-            <p>
-              The app that allows <strong>you</strong> to get insights on food you buy.
-            </p>
-            <p>
-              <strong>Step 1:</strong> Take a picture of the drink's Barcode.<br />
-              <strong>Step 2:</strong> Get insights on its sugar levels.<br />
-              It's that simple!<br /><br />
-            </p>
-            <p>
-              <strong>Color Breakdown:</strong><br />
-              - Dark Green: Excellent<br />
-              - Light Green: Good<br />
-              - Yellow: Fair<br />
-              - Red: Bad<br /><br />
-            </p>
+          <div>
+            <div className="titleContainer">
+              <h1>🧋Snap & Serve🧋</h1>
+            </div>
+            <div className="stepContainer">
+              <p>
+                The app that allows <strong>you</strong> to get insights on drinks you buy.
+              </p>
+              <p>
+                <strong>Step 1:</strong> Take a picture of the drinks Barcode.<br />
+                <strong>Step 2:</strong> Get insights on its sugar levels.<br />
+                It's that simple!<br /><br />
+              </p>
+              <p>
+                <strong>Color Breakdown:</strong><br />
+                - Dark Green: Excellent<br />
+                - Light Green: Good<br />
+                - Yellow: Fair<br />
+                - Red: Bad<br /><br />
+              </p>
+            </div>
           </div>
           <div className="centerContainer">
-          <button onClick={handleShowResults} className="navigateButton">
-            Go to Camera Page
-          </button>
+            <button onClick={handleShowResults} className="navigateButton">
+              Go to Camera Page
+            </button>
           </div>
         </div>
       ) : (
@@ -127,6 +139,7 @@ export default function App() {
           <div className="textContainer">
             <div className="stepContainer">
               <p><strong>Item Information:</strong></p>
+              {classification && <p>Classification: {classification}</p>} {/* Display classification */}
               <p>*Calories: Insert DATABASE Call + Color*</p>
               <p>*Fat: Insert DATABASE Call + Color*</p>
               <p>*Carbs: Insert DATABASE Call + Color*</p>
