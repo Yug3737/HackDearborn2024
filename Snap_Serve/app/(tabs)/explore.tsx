@@ -1,5 +1,6 @@
-
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Image, Platform, TouchableOpacity } from 'react-native';
+import axios from 'axios';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
