@@ -5,7 +5,8 @@ from flask import Flask, request, render_template, redirect, url_for, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-
+cors = CORS(app)
+app.config['CORS_HEADER'] = 'Content-Type'
 def get_sugar_100g(barcode_id):
     headers = {'user-agent':'snapandserve - Android - Version 1.0 - www.snapandserve.com'}
     url = "https://world.openfoodfacts.org/api/v0/product"
@@ -15,7 +16,6 @@ def get_sugar_100g(barcode_id):
         product_data = res.json()
         if product_data.get('status') == 1:
             sugar_100g = product_data['product'].get('nutriments', {}).get('sugars_100g')
-            # print(type(sugar_100g))
             product_name_en = product_data['product'].get('product_name_en', "")
             product_name_fr = product_data['product'].get('product_name_fr', "")
             product_name = product_name_en +" "+ product_name_fr
@@ -76,7 +76,4 @@ def classify_product():
     pass
 
 if __name__ == "__main__":
-    # barcode_id = int("611269991000")
-    # sugar_100g = get_sugar_100g(barcode_id)
-    # print(classify_into_sugar_category(sugar_100g))
     app.run(debug=True, host='0.0.0.0', port=5000)
