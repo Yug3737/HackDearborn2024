@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  background-color: #526397; /* Light background color */
+  color: #11181C; /* Light text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h3, p {
+  color: #11181C; /* Light text color */
+  text-align: center; /* Center text */
+  font-size-adjust: 14px; /* Adjust font size */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navigateButton {
+  background-color: #ff9999; /* Light tint color */
+  color: #11181C; /* Light text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigateButton:hover {
+  background-color: #cc7a7a; /* Slightly darker tint on hover */
+}
+
+.cameraContainer {
+  background-color: #526397; /* Light background color for camera preview */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.imageContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.headerImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Captured Image */
+img {
+  max-width: 100%; /* Responsive image */
+  border-radius: 5px;
+}
+
+/* Step Container for Item Information */
+.stepContainer p {
+  font-size: 14px; /* Smaller font for details */
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Centering container for camera preview and buttons */
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%; /* Ensures vertical centering */
+  text-align: center; /* Centers text inside */
+}
+
+/* Style for webcam preview */
+.webcamPreview {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px; /* Adds space between camera and buttons */
+}
+
+/* Style for buttons */
+.navigateButton {
+  margin: 10px; /* Adds space between buttons */
+  padding: 10px 20px;
+  background-color: #1900ff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.navigateButton:hover {
+  background-color: #ff0000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
