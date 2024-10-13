@@ -36,8 +36,8 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
-    bottom: -90,
-    left: -35,
+    bottom: -410,
+    left: -70,
     position: 'absolute',
   },
   stepContainer: {
