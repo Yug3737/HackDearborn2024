@@ -62,34 +62,30 @@ export default function App() {
               className="reactLogo"
             />
           </div>
-
-          {/* Right side - Text and buttons */}
-          <div className="textContainer">
-            <div className="titleContainer">
-              <h1>🧋Snap & Serve🧋</h1>
-            </div>
-            <div className="stepContainer">
-              <p>
-                The app that allows <strong>you</strong> to get insights on food you buy.
-              </p>
-              <p>
-                <strong>Step 1:</strong> Take a picture of the drink Barcode.<br />
-                <strong>Step 2:</strong> Get insights on its sugar levels.<br />
-                It's that simple!<br /><br />
-              </p>
-              <p>
-                <strong>Color Breakdown:</strong><br />
-                - Dark Green: Excellent<br />
-                - Light Green: Good<br />
-                - Yellow: Fair<br />
-                - Red: Bad<br /><br />
-              </p>
-            </div>
-            <div className="centerContainer">
-              <button onClick={handleShowResults} className="navigateButton">
-                Go to Camera Page
-              </button>
-            </div>
+          <div className="titleContainer">
+            <h1>🧋Snap & Serve🧋</h1>
+          </div>
+          <div className="stepContainer">
+            <p>
+              The app that allows <strong>you</strong> to get insights on food you buy.
+            </p>
+            <p>
+              <strong>Step 1:</strong> Take a picture of the drink's Barcode.<br />
+              <strong>Step 2:</strong> Get insights on its sugar levels.<br />
+              It's that simple!<br /><br />
+            </p>
+            <p>
+              <strong>Color Breakdown:</strong><br />
+              - Dark Green: Excellent<br />
+              - Light Green: Good<br />
+              - Yellow: Fair<br />
+              - Red: Bad<br /><br />
+            </p>
+          </div>
+          <div className="centerContainer">
+          <button onClick={handleShowResults} className="navigateButton">
+            Go to Camera Page
+          </button>
           </div>
         </div>
       ) : (
