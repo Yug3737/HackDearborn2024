@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Main container takes full viewport height */
