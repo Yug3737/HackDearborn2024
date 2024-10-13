@@ -2,7 +2,7 @@
 An application that allows you to take a photo of a QR code and see what the nutrition info is.
 
 ## Introduction
-In India and other countries have proposed implementing a symbol-based front of packaging nutrition info system. This system is based off of WHO recommendations for the daily recommendations for calories, sugar, fat, and other nutrients. If they exceeded the recommended limit then there would be a red icon on the front of the package. This is helpful for those who want to be more aware of what they consume and allows the consumer to be informed of what they are about to buy may not be the best for them. This could be beneficial for overall health on consumers and allow them to be more aware of what they eat and drink. The ![Nutrition Information Panel] (https://ch-api.healthhub.sg/api/public/content/6665167aada64c049efa5a591972deee?v=dfcc39d2). This NIP is used by the Signaporean government in order to inform consumers about their drinks. This encourages consumers to drink beverages rated A and B in order to improve their diet and their health. 
+In India and other countries have proposed implementing a symbol-based front of packaging nutrition info system. This system is based off of WHO recommendations for the daily recommendations for calories, sugar, fat, and other nutrients. If they exceeded the recommended limit then there would be a red icon on the front of the package. This is helpful for those who want to be more aware of what they consume and allows the consumer to be informed of what they are about to buy may not be the best for them. This could be beneficial for overall health on consumers and allow them to be more aware of what they eat and drink. The ![Nutrition Information Panel](https://ch-api.healthhub.sg/api/public/content/6665167aada64c049efa5a591972deee?v=dfcc39d2). This NIP is used by the Signaporean government in order to inform consumers about their drinks. This encourages consumers to drink beverages rated A and B in order to improve their diet and their health. 
 
 ## How to use
 Open our application and snap a photo of your favorite drink. The barcode must be horizontal (as seen) and our application will analyze the barcode and be able to give you a rating similar to the NIP pictured above. ![barcode example](https://m.media-amazon.com/images/I/51Dpkw64v4L.jpg)
@@ -23,7 +23,7 @@ We learned how react and react native work and their limitations. We need to res
 
 ## Resources
 React: https://react.dev/ <br>
-Flask: https://flask.palletsprojects.com/en/3.0.x/
+Flask: https://flask.palletsprojects.com/en/3.0.x/ <br>
 Gemini 1.5 Pro: https://deepmind.google/technologies/gemini/pro/ <br>
 Open Food Facts API: https://www.healthhub.sg/programmes/nutrition-hub/nutri-grade-mark <br>
 Learn more about food labels in India: https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(20)30031-1/fulltext#:~:text=The%20Food%20Safety%20Standards%20Authority,available%20to%20the%20public%20online. <br>
